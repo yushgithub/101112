@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/creative.css">
+    <link rel="stylesheet" href="fun.js">  
+    <title>document</title>
+</head>
+<body style="padding:0%; margin: 0%; background-color: #c0bfbf;">
+    <div nav class="navbar background" id="Home" style="height:100px;">
+        <ul class="nav-list">
+            
+            <li><a href="#home" style="color: cornsilk;text-decoration: none;" >HOME</a></li>
+            <li><a href="#about" style="color:cornsilk;text-decoration: none;">ABOUT</a></li>
+            <li><a href="#menu" style="color: cornsilk;text-decoration: none;">MENU</a></li>
+            <li><a href="#where" style="color: cornsilk;text-decoration: none;">WHERE</a></li>
+        </ul>
+    </div>
+    
+    <div class="itro">
+        <div class="img">
+            <img src="images/cafe.jpg" style="width:1260px;" >
+        </div>    
+       <div class="one">
+        Open from: 6am to 5pm</div> 
+       <div class="two">
+        15 Adr street, 5015</div>
+       <div class="three">
+        <b>the</b>
+         <br>
+        <b>cafe</b></div>
+    </div>
+    <div class="intro" id="about">
+        <h1><b>ABOUT THE CAFE</b> </h1>
+       
+    </div>
+    
+    <div class="para1">
+        <p1>
+            <br>
+            <br>
+            The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit 
+            amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br>
+        <br>
+            In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.
+        </p1>        
+    </div>
+    <br>
+    <div class="para2">
+        <p2>
+            
+            "Use products from nature for what it's worth - but never too early, 
+            nor too late."Fresh is the new sweet.Chef, Coffeeist and Owner: Liam Brown
+        </p2>
+    </div>
+    <br>
+    <div class="img1" style="max-width: 200%;">
+        <img src="images/sit.jpg" alt="click" style="max-width: 200%;" >
+        <div class="time">
+            <br>
+           <p><b>opening  hours:</b>
+           from  6  to 6</p>
+           <br>
+        </div>
+        <div class="adress">
+          <p><b>adress:</b>
+           3  days  a  week</p>
+        </div>
+    </div>
+
+    <div class="food" id="menu">
+        <h2><b>THE MENU</b></h2>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="tabContainer" style="max-width: 100%;">
+        <br>
+        <br>
+        <div class="buttonContainer" style="max-width: 100%;" >
+            <button onclick="showPanel(0,'green')" style="color: #000; "><b>EAT</b></button>
+            <button onclick="showPanel(1,'red')"><b>DRINK</b></button>
+        </div>
+    
+        <div class="tabPanel" id="EAT"  style="max-width: 100%;">
+            <div class="taste" style="text-align: left; font:initial;font-size: inherit;height: 130%;">
+              <br>
+             <h3>Bread Basket</h3>
+             <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+             <br>
+             <h4>Honey Almonds Granola With Fruits</h4>
+             <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+             <br>
+             <h5><b>Belgian Waffele</b></h5>
+             <p>Vanilla flavored batter with malted flour 7.50</p>
+             <br>
+             <h6><b>Scrambeled Eggs</b></h6>
+             <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+             <br>
+             <h7><b>Blueberry Pancakes</h7>
+             <p>with syrup butter and lots of berries 8.50</p>
+            </div>
+        </div>
+        <div class="tabPanel" id="DRINK" style="max-width: 100%;" >
+            <div class="cold" style="text-align:left ;font:initial;height: 130%; font-size:inherit;">
+              <br>
+             <h8><b>Coffee</b></h8>
+              <p>Regular coffee 2.50</p>
+             <br>
+             <h8><b>Chocolato</b></h8>
+             <p>espresso with milk 4.50</p>
+             <br>
+             <h10><b>Corretto</b></h10>
+             <p>Whiskey and coffee 5.00</p>
+             <br>
+             <h11><b>Iced tea</b></h11>
+             <p>Hot tea, except not hot 3.00</p>
+             <br>
+             <h12><b>Soda</b></h12>
+             <p>Coke, Sprite, Fanta, etc. 2.50</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button")
+        var tabPanels=document.querySelectorAll(".tabContainer .tabPanel")
+
+        function showPanel(panelIndex,colorCode){
+            tabButtons.forEach(function(node){
+                node.style.backgroundcolor="";
+                node.style.color="";
+            });
+            tabButtons[panelIndex].style.backgroundcolor=colorCode
+            tabButtons[panelIndex].style.color="black";
+
+            tabPanels.forEach(function(node){
+                node.style.display="none";
+            });
+            tabPanels[panelIndex].style.display="block"
+            tabPanels[panelIndex].style.backgroundcolor=colorCode;
+
+        }
+
+        showPanel(0,'red');
+    </script>
+     
+
+    <div class="cofee" >
+
+        <img src="images/cofeepic.jpg" alt="click" style="width:100%">
+    </div>
+
+    <div class="map" id="where">
+        <h13>WHERE TO FIND US</h13>
+    </div>
+
+    <div class="para3">
+        <p>
+        <br>
+        Find us at some address at some place.
+        <br>
+        </p>
+    
+    </div>
+
+
+    <div class="loc">
+        <br>
+        <img src="images/locate.jpg" alt="click" style="max-width: 100%;">
+
+    </div>
+    
+    <div class="last">
+        <p>
+          <span class="tag">FYI</span>
+          We offer full-service catering for any event, large or small. We understand your needs a
+          we will cater the food to satisfy the biggerst criteria of them all, both look and taste.
+          <br>
+        </P>
+        <p>
+          <br>
+          <strong>Reverse</strong> 
+          a table, ask for today's special or just send us a message: 
+          <br>
+        </p>
+    </div>   
+    
+    
+    <script src="fan.js"></script>
+        
+    <div class="form" id="where">
+        <form action="form.php">
+           <div class="area">
+               <input type="text" placeholder="Name">
+              <br>
+              <br>
+              <input type="text" placeholder="How Many People">
+              <br>
+              <br>
+              <input type="datetime-local"  placeholder="Date and time" required="" name="date" value="2020-11-16T20:00">>
+              <br>
+              <br>
+              <textarea cols="30" rows="1" placeholder="Message/Special requirements"></textarea>
+              <br>
+              <br> 
+              <button type="submit">Submit</button>
+           </div>  
+        </form>    
+    </div>
+       
+    
+    
+    
+
+
+</body>
+</html>
+
+
+
+
+<!-- <input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required="" name="date" value="2020-11-16T20:00"> -->
